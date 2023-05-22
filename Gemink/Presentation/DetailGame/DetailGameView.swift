@@ -111,7 +111,7 @@ extension DetailGameView {
                         .lineLimit(3)
                         .font(.title)
                     Text(releaseDate)
-                        .font(.caption2)
+                        .font(.subheadline)
                 }
                 Spacer()
                 HStack(alignment: .center) {
@@ -129,7 +129,6 @@ extension DetailGameView {
             VStack {
                 Text(description)
                     .font(.body)
-                    .padding(.top, 16)
                     .lineLimit(isExpanded ? nil : 4)
                 HStack {
                     Spacer()
