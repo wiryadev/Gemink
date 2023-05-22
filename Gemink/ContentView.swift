@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            SearchGamesView()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+            AboutView()
+                .tabItem {
+                    Label("About", systemImage: "person")
+                }
         }
-        .padding()
+        .navigationBarTitleTextColor()
+        .preferredColorScheme(.dark)
     }
 }
 

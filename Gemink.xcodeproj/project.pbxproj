@@ -7,18 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431AB41F2A1A364C00095B11 /* GeminkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431AB41E2A1A364C00095B11 /* GeminkErrorView.swift */; };
+		431AB4222A1A3EAE00095B11 /* DetailGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431AB4212A1A3EAE00095B11 /* DetailGameView.swift */; };
+		431AB4242A1A3ECB00095B11 /* GeminkEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431AB4232A1A3ECB00095B11 /* GeminkEmptyView.swift */; };
+		431AB4262A1A436100095B11 /* DetailGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431AB4252A1A436100095B11 /* DetailGameViewModel.swift */; };
+		431AB4282A1A7C7500095B11 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431AB4272A1A7C7500095B11 /* Platform.swift */; };
+		434A878A2A19C8C30066D692 /* SearchGamesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A87892A19C8C30066D692 /* SearchGamesUseCase.swift */; };
+		434A878C2A19C9050066D692 /* GetlGameDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A878B2A19C9050066D692 /* GetlGameDetailUseCase.swift */; };
+		434A878F2A19C9F60066D692 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A878E2A19C9F60066D692 /* Result.swift */; };
+		434A87922A19CBD40066D692 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 434A87912A19CBD40066D692 /* SDWebImageSwiftUI */; };
+		434A87952A19CC6C0066D692 /* GameItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A87942A19CC6C0066D692 /* GameItemView.swift */; };
+		434A87982A19FA580066D692 /* CornerRadiusModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A87972A19FA580066D692 /* CornerRadiusModifier.swift */; };
+		434A879A2A19FAF70066D692 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A87992A19FAF70066D692 /* AppColor.swift */; };
+		434A879D2A19FED70066D692 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A879C2A19FED70066D692 /* AboutView.swift */; };
+		434A87A02A1A14040066D692 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A879F2A1A14040066D692 /* HomeViewModel.swift */; };
+		434A87A22A1A15760066D692 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A87A12A1A15760066D692 /* HomeView.swift */; };
+		434A87A42A1A1B4B0066D692 /* NavigationBarExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A87A32A1A1B4B0066D692 /* NavigationBarExt.swift */; };
+		437959152A1B04200092D0FB /* SearchGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437959142A1B04200092D0FB /* SearchGamesView.swift */; };
+		437959172A1B042D0092D0FB /* SearchGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437959162A1B042D0092D0FB /* SearchGamesViewModel.swift */; };
 		43E797072A18ADFD00C57456 /* GeminkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797062A18ADFD00C57456 /* GeminkApp.swift */; };
 		43E797092A18ADFD00C57456 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797082A18ADFD00C57456 /* ContentView.swift */; };
 		43E7970B2A18ADFE00C57456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E7970A2A18ADFE00C57456 /* Assets.xcassets */; };
 		43E7970E2A18ADFE00C57456 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E7970D2A18ADFE00C57456 /* Preview Assets.xcassets */; };
+		43E7971A2A18E7E000C57456 /* GameDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797192A18E7E000C57456 /* GameDto.swift */; };
+		43E7971D2A18E94000C57456 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 43E7971C2A18E94000C57456 /* Alamofire */; };
+		43E7971F2A18EB2900C57456 /* DeveloperDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E7971E2A18EB2900C57456 /* DeveloperDto.swift */; };
+		43E797212A18EB5100C57456 /* EsrbDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797202A18EB5100C57456 /* EsrbDto.swift */; };
+		43E797232A18EBAA00C57456 /* PlatformDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797222A18EBAA00C57456 /* PlatformDto.swift */; };
+		43E797252A18EF5800C57456 /* GameRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797242A18EF5800C57456 /* GameRemoteDataSource.swift */; };
+		43E797282A18F01600C57456 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797272A18F01600C57456 /* Constants.swift */; };
+		43E7972A2A18F6BC00C57456 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797292A18F6BC00C57456 /* GameRepository.swift */; };
+		43E7972C2A18F7AE00C57456 /* GameRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E7972B2A18F7AE00C57456 /* GameRepositoryImpl.swift */; };
+		43E797302A19018500C57456 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E7972F2A19018500C57456 /* Game.swift */; };
+		43E797322A19038C00C57456 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797312A19038C00C57456 /* Genre.swift */; };
+		43E797342A1903FC00C57456 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797332A1903FC00C57456 /* Developer.swift */; };
+		43E797362A19044D00C57456 /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797352A19044D00C57456 /* Publisher.swift */; };
+		43E797382A19055D00C57456 /* AgeRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797372A19055D00C57456 /* AgeRating.swift */; };
+		43E7973A2A192BD200C57456 /* GenreDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E797392A192BD200C57456 /* GenreDto.swift */; };
+		43E7973D2A1932B500C57456 /* DiscoverGamesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E7973C2A1932B500C57456 /* DiscoverGamesUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		431AB41E2A1A364C00095B11 /* GeminkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminkErrorView.swift; sourceTree = "<group>"; };
+		431AB4212A1A3EAE00095B11 /* DetailGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGameView.swift; sourceTree = "<group>"; };
+		431AB4232A1A3ECB00095B11 /* GeminkEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminkEmptyView.swift; sourceTree = "<group>"; };
+		431AB4252A1A436100095B11 /* DetailGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGameViewModel.swift; sourceTree = "<group>"; };
+		431AB4272A1A7C7500095B11 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		434A87892A19C8C30066D692 /* SearchGamesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGamesUseCase.swift; sourceTree = "<group>"; };
+		434A878B2A19C9050066D692 /* GetlGameDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetlGameDetailUseCase.swift; sourceTree = "<group>"; };
+		434A878E2A19C9F60066D692 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		434A87942A19CC6C0066D692 /* GameItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameItemView.swift; sourceTree = "<group>"; };
+		434A87972A19FA580066D692 /* CornerRadiusModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusModifier.swift; sourceTree = "<group>"; };
+		434A87992A19FAF70066D692 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		434A879C2A19FED70066D692 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		434A879F2A1A14040066D692 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		434A87A12A1A15760066D692 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		434A87A32A1A1B4B0066D692 /* NavigationBarExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExt.swift; sourceTree = "<group>"; };
+		437959142A1B04200092D0FB /* SearchGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGamesView.swift; sourceTree = "<group>"; };
+		437959162A1B042D0092D0FB /* SearchGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGamesViewModel.swift; sourceTree = "<group>"; };
 		43E797032A18ADFD00C57456 /* Gemink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gemink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E797062A18ADFD00C57456 /* GeminkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminkApp.swift; sourceTree = "<group>"; };
 		43E797082A18ADFD00C57456 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		43E7970A2A18ADFE00C57456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43E7970D2A18ADFE00C57456 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		43E797192A18E7E000C57456 /* GameDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDto.swift; sourceTree = "<group>"; };
+		43E7971E2A18EB2900C57456 /* DeveloperDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperDto.swift; sourceTree = "<group>"; };
+		43E797202A18EB5100C57456 /* EsrbDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsrbDto.swift; sourceTree = "<group>"; };
+		43E797222A18EBAA00C57456 /* PlatformDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformDto.swift; sourceTree = "<group>"; };
+		43E797242A18EF5800C57456 /* GameRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRemoteDataSource.swift; sourceTree = "<group>"; };
+		43E797272A18F01600C57456 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		43E797292A18F6BC00C57456 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		43E7972B2A18F7AE00C57456 /* GameRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepositoryImpl.swift; sourceTree = "<group>"; };
+		43E7972F2A19018500C57456 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		43E797312A19038C00C57456 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		43E797332A1903FC00C57456 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		43E797352A19044D00C57456 /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
+		43E797372A19055D00C57456 /* AgeRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRating.swift; sourceTree = "<group>"; };
+		43E797392A192BD200C57456 /* GenreDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreDto.swift; sourceTree = "<group>"; };
+		43E7973C2A1932B500C57456 /* DiscoverGamesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverGamesUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +92,82 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434A87922A19CBD40066D692 /* SDWebImageSwiftUI in Frameworks */,
+				43E7971D2A18E94000C57456 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431AB4202A1A3E8900095B11 /* DetailGame */ = {
+			isa = PBXGroup;
+			children = (
+				431AB4212A1A3EAE00095B11 /* DetailGameView.swift */,
+				431AB4252A1A436100095B11 /* DetailGameViewModel.swift */,
+			);
+			path = DetailGame;
+			sourceTree = "<group>";
+		};
+		434A878D2A19C9E10066D692 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				437959132A1B04070092D0FB /* Search */,
+				431AB4202A1A3E8900095B11 /* DetailGame */,
+				434A879E2A1A13D20066D692 /* Home */,
+				434A879B2A19FE3E0066D692 /* About */,
+				434A87962A19FA370066D692 /* Extension */,
+				434A87932A19CC300066D692 /* Components */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		434A87932A19CC300066D692 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				434A87942A19CC6C0066D692 /* GameItemView.swift */,
+				431AB41E2A1A364C00095B11 /* GeminkErrorView.swift */,
+				431AB4232A1A3ECB00095B11 /* GeminkEmptyView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		434A87962A19FA370066D692 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				434A87972A19FA580066D692 /* CornerRadiusModifier.swift */,
+				434A87992A19FAF70066D692 /* AppColor.swift */,
+				434A87A32A1A1B4B0066D692 /* NavigationBarExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		434A879B2A19FE3E0066D692 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				434A879C2A19FED70066D692 /* AboutView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		434A879E2A1A13D20066D692 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				434A879F2A1A14040066D692 /* HomeViewModel.swift */,
+				434A87A12A1A15760066D692 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		437959132A1B04070092D0FB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				437959142A1B04200092D0FB /* SearchGamesView.swift */,
+				437959162A1B042D0092D0FB /* SearchGamesViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		43E796FA2A18ADFD00C57456 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +187,10 @@
 		43E797052A18ADFD00C57456 /* Gemink */ = {
 			isa = PBXGroup;
 			children = (
+				434A878D2A19C9E10066D692 /* Presentation */,
+				43E7972D2A18FE7D00C57456 /* Domain */,
+				43E797262A18F00000C57456 /* Shared */,
+				43E797142A18B15300C57456 /* Data */,
 				43E797062A18ADFD00C57456 /* GeminkApp.swift */,
 				43E797082A18ADFD00C57456 /* ContentView.swift */,
 				43E7970A2A18ADFE00C57456 /* Assets.xcassets */,
@@ -65,6 +205,94 @@
 				43E7970D2A18ADFE00C57456 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		43E797142A18B15300C57456 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				43E797162A18B17600C57456 /* DataSource */,
+				43E797152A18B16400C57456 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		43E797152A18B16400C57456 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				43E797292A18F6BC00C57456 /* GameRepository.swift */,
+				43E7972B2A18F7AE00C57456 /* GameRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		43E797162A18B17600C57456 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				43E797172A18B17D00C57456 /* Remote */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		43E797172A18B17D00C57456 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				43E797182A18E7D200C57456 /* Dto */,
+				43E797242A18EF5800C57456 /* GameRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		43E797182A18E7D200C57456 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				43E797192A18E7E000C57456 /* GameDto.swift */,
+				43E7971E2A18EB2900C57456 /* DeveloperDto.swift */,
+				43E797202A18EB5100C57456 /* EsrbDto.swift */,
+				43E797222A18EBAA00C57456 /* PlatformDto.swift */,
+				43E797392A192BD200C57456 /* GenreDto.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		43E797262A18F00000C57456 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				43E797272A18F01600C57456 /* Constants.swift */,
+				434A878E2A19C9F60066D692 /* Result.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		43E7972D2A18FE7D00C57456 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				43E7973B2A1932A200C57456 /* UseCases */,
+				43E7972E2A19016C00C57456 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		43E7972E2A19016C00C57456 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43E7972F2A19018500C57456 /* Game.swift */,
+				43E797312A19038C00C57456 /* Genre.swift */,
+				43E797332A1903FC00C57456 /* Developer.swift */,
+				43E797352A19044D00C57456 /* Publisher.swift */,
+				43E797372A19055D00C57456 /* AgeRating.swift */,
+				431AB4272A1A7C7500095B11 /* Platform.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		43E7973B2A1932A200C57456 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				43E7973C2A1932B500C57456 /* DiscoverGamesUseCase.swift */,
+				434A87892A19C8C30066D692 /* SearchGamesUseCase.swift */,
+				434A878B2A19C9050066D692 /* GetlGameDetailUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +311,10 @@
 			dependencies = (
 			);
 			name = Gemink;
+			packageProductDependencies = (
+				43E7971C2A18E94000C57456 /* Alamofire */,
+				434A87912A19CBD40066D692 /* SDWebImageSwiftUI */,
+			);
 			productName = Gemink;
 			productReference = 43E797032A18ADFD00C57456 /* Gemink.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +343,10 @@
 				Base,
 			);
 			mainGroup = 43E796FA2A18ADFD00C57456;
+			packageReferences = (
+				43E7971B2A18E94000C57456 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				434A87902A19CBD40066D692 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 43E797042A18ADFD00C57456 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +373,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E797232A18EBAA00C57456 /* PlatformDto.swift in Sources */,
+				43E7973A2A192BD200C57456 /* GenreDto.swift in Sources */,
+				434A879A2A19FAF70066D692 /* AppColor.swift in Sources */,
+				434A87A02A1A14040066D692 /* HomeViewModel.swift in Sources */,
+				431AB4262A1A436100095B11 /* DetailGameViewModel.swift in Sources */,
+				43E7971A2A18E7E000C57456 /* GameDto.swift in Sources */,
+				437959152A1B04200092D0FB /* SearchGamesView.swift in Sources */,
+				43E797252A18EF5800C57456 /* GameRemoteDataSource.swift in Sources */,
+				43E797322A19038C00C57456 /* Genre.swift in Sources */,
 				43E797092A18ADFD00C57456 /* ContentView.swift in Sources */,
+				434A878F2A19C9F60066D692 /* Result.swift in Sources */,
+				43E797342A1903FC00C57456 /* Developer.swift in Sources */,
+				43E7973D2A1932B500C57456 /* DiscoverGamesUseCase.swift in Sources */,
+				431AB41F2A1A364C00095B11 /* GeminkErrorView.swift in Sources */,
+				437959172A1B042D0092D0FB /* SearchGamesViewModel.swift in Sources */,
+				434A87A42A1A1B4B0066D692 /* NavigationBarExt.swift in Sources */,
+				431AB4282A1A7C7500095B11 /* Platform.swift in Sources */,
+				43E797362A19044D00C57456 /* Publisher.swift in Sources */,
+				43E7972A2A18F6BC00C57456 /* GameRepository.swift in Sources */,
+				434A878C2A19C9050066D692 /* GetlGameDetailUseCase.swift in Sources */,
+				431AB4242A1A3ECB00095B11 /* GeminkEmptyView.swift in Sources */,
+				43E7972C2A18F7AE00C57456 /* GameRepositoryImpl.swift in Sources */,
+				434A87A22A1A15760066D692 /* HomeView.swift in Sources */,
+				43E797302A19018500C57456 /* Game.swift in Sources */,
+				43E7971F2A18EB2900C57456 /* DeveloperDto.swift in Sources */,
+				434A879D2A19FED70066D692 /* AboutView.swift in Sources */,
+				43E797382A19055D00C57456 /* AgeRating.swift in Sources */,
+				431AB4222A1A3EAE00095B11 /* DetailGameView.swift in Sources */,
+				43E797212A18EB5100C57456 /* EsrbDto.swift in Sources */,
+				434A87952A19CC6C0066D692 /* GameItemView.swift in Sources */,
 				43E797072A18ADFD00C57456 /* GeminkApp.swift in Sources */,
+				434A87982A19FA580066D692 /* CornerRadiusModifier.swift in Sources */,
+				43E797282A18F01600C57456 /* Constants.swift in Sources */,
+				434A878A2A19C8C30066D692 /* SearchGamesUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +607,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		434A87902A19CBD40066D692 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = exactVersion;
+				version = 2.2.3;
+			};
+		};
+		43E7971B2A18E94000C57456 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		434A87912A19CBD40066D692 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 434A87902A19CBD40066D692 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		43E7971C2A18E94000C57456 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43E7971B2A18E94000C57456 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43E796FB2A18ADFD00C57456 /* Project object */;
 }
