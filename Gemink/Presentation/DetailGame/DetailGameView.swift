@@ -227,7 +227,7 @@ extension DetailGameView {
             VStack(alignment: .leading) {
                 Text(label)
                     .font(.footnote.weight(.medium))
-                    .foregroundColor(.onyx)
+                    .foregroundColor(.dimGray)
                 Text(value)
                     .font(.body)
                     .underline()

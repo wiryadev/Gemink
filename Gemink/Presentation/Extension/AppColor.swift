@@ -19,7 +19,7 @@ extension Color {
         }
     static let eerieBlack = Color(hex: 0xFF202020)
     static let nightBlack = Color(hex: 0xFF151515)
-    static let onyx = Color(hex: 0xFF444444)
+    static let dimGray = Color(hex: 0xFF6D6D6D)
 }
 
 extension UIColor {
