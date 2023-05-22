@@ -9,11 +9,9 @@ import Foundation
 
 class GameRepositoryImpl: GameRepository {
     
-    private let remoteDataSource: GameRemoteDataSource
+    static let shared: GameRepository = GameRepositoryImpl()
     
-    init(remoteDataSource: GameRemoteDataSource) {
-        self.remoteDataSource = remoteDataSource
-    }
+    private let remoteDataSource: GameRemoteDataSource = GameRemoteDataSource()
     
     func discoverGames() async throws -> [GameDto] {
         return try await remoteDataSource.discoverGames().results ?? []
@@ -26,7 +24,5 @@ class GameRepositoryImpl: GameRepository {
     func getGameDetail(id: Int) async throws -> GameDto {
         return try await remoteDataSource.getGameDetail(id: id)
     }
-    
-    
     
 }

@@ -12,9 +12,7 @@ extension SearchGamesView {
     @MainActor
     class SearchGamesViewModel: ObservableObject {
         private let searchGames = SearchGamesUseCase(
-            gameRepository: GameRepositoryImpl(
-                remoteDataSource: GameRemoteDataSource()
-            )
+            gameRepository: GameRepositoryImpl.shared
         )
         
         @Published var searchText: String = ""

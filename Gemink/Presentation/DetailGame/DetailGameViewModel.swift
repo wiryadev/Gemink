@@ -13,9 +13,7 @@ extension DetailGameView {
     class DetailGameViewModel: ObservableObject {
         
         private let getGameDetail = GetGameDetailUseCase(
-            gameRepository: GameRepositoryImpl(
-                remoteDataSource: GameRemoteDataSource()
-            )
+            gameRepository: GameRepositoryImpl.shared
         )
         
         @Published var result: Result<Game> = Result.initial

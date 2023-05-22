@@ -13,9 +13,7 @@ extension HomeView {
     class HomeViewModel: ObservableObject {
         
         private let discoverGames = DiscoverGamesUseCase(
-            gameRepository: GameRepositoryImpl(
-                remoteDataSource: GameRemoteDataSource()
-            )
+            gameRepository: GameRepositoryImpl.shared
         )
         
         init() {
