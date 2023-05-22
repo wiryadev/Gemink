@@ -8,20 +8,15 @@
 import Foundation
 
 extension HomeView {
-    
     @MainActor
     class HomeViewModel: ObservableObject {
-        
         private let discoverGames = DiscoverGamesUseCase(
             gameRepository: GameRepositoryImpl.shared
         )
-        
         init() {
             Task { await discoverGames() }
         }
-        
         @Published var result: Result<[Game]> = Result.initial
-        
         func discoverGames() async {
             self.result = Result.loading
             do {
@@ -31,7 +26,7 @@ extension HomeView {
                 } else {
                     self.result = Result.success(data: data)
                 }
-            } catch (let error) {
+            } catch let error {
                 self.result = Result.error(message: error.localizedDescription)
                 print(String(describing: error))
             }

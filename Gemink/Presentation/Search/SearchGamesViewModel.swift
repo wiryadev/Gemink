@@ -8,16 +8,13 @@
 import Foundation
 
 extension SearchGamesView {
-    
     @MainActor
     class SearchGamesViewModel: ObservableObject {
         private let searchGames = SearchGamesUseCase(
             gameRepository: GameRepositoryImpl.shared
         )
-        
         @Published var searchText: String = ""
         @Published var result: Result<[Game]> = Result.initial
-        
         func searchGames() async {
             self.result = Result.loading
             do {
@@ -27,7 +24,7 @@ extension SearchGamesView {
                 } else {
                     self.result = Result.success(data: data)
                 }
-            } catch (let error) {
+            } catch let error {
                 self.result = Result.error(message: error.localizedDescription)
                 print(String(describing: error))
             }

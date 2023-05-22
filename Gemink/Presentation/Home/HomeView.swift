@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
-    
     @StateObject var viewModel = HomeViewModel()
-    
     var body: some View {
         NavigationStack {
             ZStack {
                 Color.nightBlack.ignoresSafeArea()
-                
                 switch viewModel.result {
                 case .success(let data):
                     ScrollView {

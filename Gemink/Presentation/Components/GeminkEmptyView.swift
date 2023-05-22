@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct GeminkEmptyView: View {
-    
     let message: String
-    
     var body: some View {
         VStack {
             Image(systemName: "lamp.desk")

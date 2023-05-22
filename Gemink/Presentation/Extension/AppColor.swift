@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension Color {
-    
     init(hex: Int64, alpha: Double = 1) {
             self.init(
                 .sRGB,
@@ -18,7 +17,6 @@ extension Color {
                 opacity: alpha
             )
         }
-    
     static let eerieBlack = Color(hex: 0xFF202020)
     static let nightBlack = Color(hex: 0xFF151515)
     static let onyx = Color(hex: 0xFF444444)

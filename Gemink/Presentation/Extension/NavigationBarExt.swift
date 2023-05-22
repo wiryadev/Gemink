@@ -14,15 +14,11 @@ extension View {
     /// Supports both regular and large titles.
     @available(iOS 14, *)
     func navigationBarTitleTextColor() -> some View {
-    
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white ]
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().barTintColor = UIColor.nightBlack
         UITabBar.appearance().backgroundColor = UIColor.eerieBlack
         UITabBar.appearance().barTintColor = UIColor.eerieBlack
-        
         return self
     }
 }
-
-

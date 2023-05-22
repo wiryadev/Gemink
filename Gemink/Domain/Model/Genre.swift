@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct  Genre{
+struct Genre {
     let id: Int
     let name: String
 }

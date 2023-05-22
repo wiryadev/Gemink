@@ -27,7 +27,6 @@ extension GameDto {
         if let esrb = self.esrbRating {
             ageRating = AgeRating.map(from: esrb)
         }
-        
         var releaseDate: Date?
         if let date = self.released {
             let dateFormatter = DateFormatter()
@@ -57,7 +56,6 @@ extension GameDto {
 }
 
 extension Game {
-    
     func getFormattedReleaseDate() -> String {
         var releaseDate = "-"
         if let date = self.releaseDate {
@@ -67,7 +65,6 @@ extension Game {
         }
         return releaseDate
     }
-    
     func getFormattedRating() -> String {
         return String(format: "%.1f", self.rating)
     }

@@ -9,15 +9,10 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct DetailGameView: View {
-    
     let id: Int
-    
     @StateObject var viewModel = DetailGameViewModel()
-    
     let topInset: CGFloat
-    
     let imageCorner: UIRectCorner
-    
     init(id: Int) {
         self.id = id
         topInset = UIApplication
@@ -28,9 +23,7 @@ struct DetailGameView: View {
             .safeAreaInsets.top ?? 0
         imageCorner = (topInset > 0) ? .allCorners :
         [.bottomLeft, .bottomRight]
-        
     }
-    
     var body: some View {
         ZStack {
             Color.nightBlack.ignoresSafeArea()
@@ -52,7 +45,6 @@ struct DetailGameView: View {
                                 width: UIScreen.main.bounds.width
                             )
                             .cornerRadius(16, corners: imageCorner)
-                        
                         VStack(alignment: .leading) {
                             OverviewView(
                                 title: data.title,
@@ -105,11 +97,9 @@ struct DetailGameView: View {
         .toolbar(.hidden, for: .tabBar)
         .task { await viewModel.getGameDetail(id: id) }
     }
-    
 }
 
 extension DetailGameView {
-    
     struct OverviewView: View {
         let title: String
         let releaseDate: String
@@ -132,19 +122,15 @@ extension DetailGameView {
             }
         }
     }
-    
     struct DescriptionView: View {
-        
         let description: String
         @State var isExpanded = false
-        
         var body: some View {
-            VStack() {
+            VStack {
                 Text(description)
                     .font(.body)
                     .padding(.top, 16)
                     .lineLimit(isExpanded ? nil : 4)
-                
                 HStack {
                     Spacer()
                     Button {
@@ -163,10 +149,8 @@ extension DetailGameView {
             }
         }
     }
-    
     struct GenreView: View {
         private var formattedGenre: String
-        
         init(genres: [Genre]) {
             if genres.isEmpty {
                 self.formattedGenre = "-"
@@ -176,7 +160,6 @@ extension DetailGameView {
                 }.joined(separator: ", ")
             }
         }
-        
         var body: some View {
             LabelValueDetailView(
                 label: "Genre",
@@ -184,10 +167,8 @@ extension DetailGameView {
             )
         }
     }
-    
     struct PlatformView: View {
         private var formattedPlatform: String
-        
         init(platforms: [Platform]) {
             if platforms.isEmpty {
                 self.formattedPlatform = "-"
@@ -197,7 +178,6 @@ extension DetailGameView {
                 }.joined(separator: ", ")
             }
         }
-        
         var body: some View {
             LabelValueDetailView(
                 label: "Platforms",
@@ -205,14 +185,11 @@ extension DetailGameView {
             )
         }
     }
-    
     struct PublisherView: View {
         private var publisher: String
-        
         init(publisher: Publisher?) {
             self.publisher = publisher?.name ?? "-"
         }
-        
         var body: some View {
             LabelValueDetailView(
                 label: "Publisher",
@@ -220,14 +197,11 @@ extension DetailGameView {
             )
         }
     }
-    
     struct DeveloperView: View {
         private var developer: String
-        
         init(developer: Developer?) {
             self.developer = developer?.name ?? "-"
         }
-        
         var body: some View {
             LabelValueDetailView(
                 label: "Developer",
@@ -235,14 +209,11 @@ extension DetailGameView {
             )
         }
     }
-    
     struct AgeRatingView: View {
         private var ageRating: String
-        
         init(ageRating: AgeRating?) {
             self.ageRating = ageRating?.name ?? "-"
         }
-        
         var body: some View {
             LabelValueDetailView(
                 label: "Age Rating",
@@ -250,7 +221,6 @@ extension DetailGameView {
             )
         }
     }
-    
     struct LabelValueDetailView: View {
         let label: String
         let value: String
@@ -269,7 +239,6 @@ extension DetailGameView {
         }
     }
 }
-
 
 struct DetailGameView_Previews: PreviewProvider {
     static var previews: some View {

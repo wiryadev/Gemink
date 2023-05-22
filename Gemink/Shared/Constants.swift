@@ -8,6 +8,6 @@
 import Foundation
 
 final class Constants {
-    static let BASE_URL = "https://api.rawg.io/api"
-    static let API_KEY = "YOUR API KEY"
+    static let BaseUrl = "https://api.rawg.io/api"
+    static let ApiKey = "YOUR API KEY"
 }

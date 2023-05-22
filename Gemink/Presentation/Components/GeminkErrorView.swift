@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct GeminkErrorView: View {
-    
     let message: String
     let action: () -> Void
-    
     var body: some View {
         VStack {
             Image(systemName: "exclamationmark.icloud")
@@ -36,7 +34,7 @@ struct GeminkErrorView: View {
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
         GeminkErrorView(message: "Error") {
-            
+            // do something
         }
     }
 }

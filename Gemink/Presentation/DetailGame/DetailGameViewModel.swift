@@ -8,27 +8,21 @@
 import Foundation
 
 extension DetailGameView {
-    
     @MainActor
     class DetailGameViewModel: ObservableObject {
-        
         private let getGameDetail = GetGameDetailUseCase(
             gameRepository: GameRepositoryImpl.shared
         )
-        
         @Published var result: Result<Game> = Result.initial
-        
-        
         func getGameDetail(id: Int) async {
             self.result = Result.loading
             do {
                 let data = try await getGameDetail.execute(id: id)
                 self.result = Result.success(data: data)
-            } catch (let error) {
+            } catch let error {
                 self.result = Result.error(message: error.localizedDescription)
                 print(String(describing: error))
             }
         }
-        
     }
 }

@@ -19,7 +19,6 @@ struct AboutView: View {
                         .frame(width: 192, height: 192)
                         .clipShape(Circle())
                         .padding(.bottom, 16)
-                    
                     Text("Abrar Wiryawan")
                         .font(.title)
                         .fontWeight(.bold)

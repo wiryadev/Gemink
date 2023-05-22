@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct SearchGamesView: View {
-    
     @StateObject var viewModel = SearchGamesViewModel()
-    
     var body: some View {
         NavigationStack {
             ZStack {

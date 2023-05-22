@@ -9,23 +9,18 @@ import Foundation
 import Alamofire
 
 class GameRemoteDataSource {
-    
     func discoverGames() async throws -> GamesDto {
-        return try await getResponseFromApi(stringUrl: "\(Constants.BASE_URL)/games")
+        return try await getResponseFromApi(stringUrl: "\(Constants.BaseUrl)/games")
     }
-    
     func searchGames(query: String) async throws -> GamesDto {
-        return try await getResponseFromApi(stringUrl: "\(Constants.BASE_URL)/games?search=\(query)")
+        return try await getResponseFromApi(stringUrl: "\(Constants.BaseUrl)/games?search=\(query)")
     }
-    
     func getGameDetail(id: Int) async throws -> GameDto {
-        return try await getResponseFromApi(stringUrl: "\(Constants.BASE_URL)/games/\(id)")
+        return try await getResponseFromApi(stringUrl: "\(Constants.BaseUrl)/games/\(id)")
     }
-    
 }
 
 extension GameRemoteDataSource {
-    
     private func getResponseFromApi<T: Codable>(
         stringUrl: String,
         method: HTTPMethod? = nil
@@ -35,7 +30,7 @@ extension GameRemoteDataSource {
             AF.request(
                 url,
                 method: method ?? .get,
-                parameters: ["key": Constants.API_KEY]
+                parameters: ["key": Constants.ApiKey]
             ).responseDecodable(of: T.self) { response in
                 debugPrint(response)
                 switch response.result {
@@ -46,7 +41,6 @@ extension GameRemoteDataSource {
                 }
             }
         })
-        
         return data
     }
 }
