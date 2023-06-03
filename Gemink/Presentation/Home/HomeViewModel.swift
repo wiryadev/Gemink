@@ -8,15 +8,20 @@
 import Foundation
 
 extension HomeView {
+
     @MainActor
     class HomeViewModel: ObservableObject {
+
         private let discoverGames = DiscoverGamesUseCase(
             gameRepository: GameRepositoryImpl.shared
         )
+
         init() {
             Task { await discoverGames() }
         }
+
         @Published var result: Result<[Game]> = Result.initial
+
         func discoverGames() async {
             self.result = Result.loading
             do {

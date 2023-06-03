@@ -61,12 +61,11 @@ struct SearchGamesView: View {
             viewModel.$searchText.debounce(
                 for: .seconds(2),
                 scheduler: DispatchQueue.main
-            ),
-            perform: { output in
-                guard !output.isEmpty else { return }
-                Task { await viewModel.searchGames() }
-            }
-        )
+            )
+        ) { output in
+            guard !output.isEmpty else { return }
+            Task { await viewModel.searchGames() }
+        }
         .onSubmit(of: .search) {
             Task {
                 await viewModel.searchGames()

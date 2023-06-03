@@ -8,13 +8,17 @@
 import Foundation
 
 extension SearchGamesView {
+
     @MainActor
     class SearchGamesViewModel: ObservableObject {
+
         private let searchGames = SearchGamesUseCase(
             gameRepository: GameRepositoryImpl.shared
         )
+
         @Published var searchText: String = ""
         @Published var result: Result<[Game]> = Result.initial
+
         func searchGames() async {
             self.result = Result.loading
             do {

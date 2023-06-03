@@ -9,8 +9,11 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct DetailGameView: View {
+
     let id: Int
+
     @StateObject var viewModel = DetailGameViewModel()
+
     let topInset: CGFloat
     let imageCorner: UIRectCorner
     init(id: Int) {
@@ -24,6 +27,7 @@ struct DetailGameView: View {
         imageCorner = (topInset > 0) ? .allCorners :
         [.bottomLeft, .bottomRight]
     }
+
     var body: some View {
         ZStack {
             Color.nightBlack.ignoresSafeArea()
@@ -36,15 +40,16 @@ struct DetailGameView: View {
                         }
                         WebImage(url: data.image)
                             .resizable()
-                            .placeholder(content: {
+                            .placeholder {
                                 ProgressView()
-                            })
+                            }
                             .transition(.fade(duration: 0.4))
                             .scaledToFit()
                             .frame(
                                 width: UIScreen.main.bounds.width
                             )
                             .cornerRadius(16, corners: imageCorner)
+
                         VStack(alignment: .leading) {
                             OverviewView(
                                 title: data.title,
@@ -123,6 +128,7 @@ struct DetailGameView: View {
 }
 
 extension DetailGameView {
+
     struct OverviewView: View {
         let title: String
         let releaseDate: String
@@ -145,6 +151,7 @@ extension DetailGameView {
             }
         }
     }
+
     struct DescriptionView: View {
         let description: String
         @State var isExpanded = false
@@ -171,6 +178,7 @@ extension DetailGameView {
             }
         }
     }
+
     struct GenreView: View {
         private var formattedGenre: String
         init(genres: [Genre]) {
@@ -191,6 +199,7 @@ extension DetailGameView {
             )
         }
     }
+
     struct PlatformView: View {
         private var formattedPlatform: String
         init(platforms: [Platform]) {
@@ -211,6 +220,7 @@ extension DetailGameView {
             )
         }
     }
+
     struct PublisherView: View {
         private var publisher: String
         init(publisher: Publisher?) {
@@ -223,6 +233,7 @@ extension DetailGameView {
             )
         }
     }
+
     struct DeveloperView: View {
         private var developer: String
         init(developer: Developer?) {
@@ -235,6 +246,7 @@ extension DetailGameView {
             )
         }
     }
+
     struct AgeRatingView: View {
         private var ageRating: String
         init(ageRating: AgeRating?) {
@@ -247,6 +259,7 @@ extension DetailGameView {
             )
         }
     }
+
     struct LabelValueDetailView: View {
         let label: String
         let value: String

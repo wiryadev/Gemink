@@ -8,10 +8,13 @@
 import Foundation
 
 class GetFavoriteGamesUseCase {
+
     private let gameRepository: GameRepository
+
     init(gameRepository: GameRepository) {
         self.gameRepository = gameRepository
     }
+
     func execute() throws -> [Game] {
         return try gameRepository.getFavoriteGames()
             .map { $0.mapToDomain() }

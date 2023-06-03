@@ -8,10 +8,13 @@
 import Foundation
 
 class AddGameToFavoriteUseCase {
+
     private let gameRepository: GameRepository
+
     init(gameRepository: GameRepository) {
         self.gameRepository = gameRepository
     }
+
     func execute(game: Game) async -> Bool {
         return await gameRepository.addFavorite(
             id: game.id,

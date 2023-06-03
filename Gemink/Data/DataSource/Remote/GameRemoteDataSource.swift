@@ -9,12 +9,15 @@ import Foundation
 import Alamofire
 
 class GameRemoteDataSource {
+
     func discoverGames() async throws -> GamesDto {
         return try await getResponseFromApi(stringUrl: "\(Constants.BaseUrl)/games")
     }
+
     func searchGames(query: String) async throws -> GamesDto {
         return try await getResponseFromApi(stringUrl: "\(Constants.BaseUrl)/games?search=\(query)")
     }
+
     func getGameDetail(id: Int) async throws -> GameDto {
         return try await getResponseFromApi(stringUrl: "\(Constants.BaseUrl)/games/\(id)")
     }
