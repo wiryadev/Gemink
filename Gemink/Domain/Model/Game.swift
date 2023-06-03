@@ -13,7 +13,7 @@ struct Game: Identifiable {
     let image: URL?
     let description: String
     let releaseDate: Date?
-    let rating: Double
+    let rating: Float
     let genres: [Genre]
     let platforms: [Platform]
     let developer: Developer?
@@ -42,15 +42,33 @@ extension GameDto {
                 .trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
             releaseDate: releaseDate,
             rating: self.rating ?? 0.0,
-            genres: self.genres?.map({ $0.mapToDomain() }) ?? [],
-            platforms: self.platforms?.map({ $0.mapToDomain() }) ?? [],
+            genres: self.genres?.map { $0.mapToDomain() } ?? [],
+            platforms: self.platforms?.map { $0.mapToDomain() } ?? [],
             developer: self.developers?
-                .min(by: { first, second in
+                .min { first, second in
                     first.id ?? 0 < second.id ?? 0
-                })?
+                }?
                 .mapToDomain(),
             publisher: self.publishers?.first?.mapToDomain(),
             ageRating: ageRating
+        )
+    }
+}
+
+extension GameEntity {
+    func mapToDomain() -> Game {
+        return Game(
+            id: Int(id),
+            title: title ?? "",
+            image: URL(string: backgroundImage ?? ""),
+            description: description,
+            releaseDate: releaseDate,
+            rating: rating,
+            genres: [],
+            platforms: [],
+            developer: nil,
+            publisher: nil,
+            ageRating: nil
         )
     }
 }

@@ -26,12 +26,13 @@ extension GameRemoteDataSource {
         method: HTTPMethod? = nil
     ) async throws -> T {
         let url = URLComponents(string: stringUrl)!
-        let data: T = try await withCheckedThrowingContinuation({ continuation in
+        let data: T = try await withCheckedThrowingContinuation { continuation in
             AF.request(
                 url,
                 method: method ?? .get,
                 parameters: ["key": Constants.ApiKey]
-            ).responseDecodable(of: T.self) { response in
+            )
+            .responseDecodable(of: T.self) { response in
                 debugPrint(response)
                 switch response.result {
                 case .success(let data):
@@ -40,7 +41,7 @@ extension GameRemoteDataSource {
                     continuation .resume(throwing: error)
                 }
             }
-        })
+        }
         return data
     }
 }

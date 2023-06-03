@@ -9,15 +9,16 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct GameItemView: View {
+
     let game: Game
 
     var body: some View {
         VStack {
             WebImage(url: game.image)
                 .resizable()
-                .placeholder(content: {
+                .placeholder {
                     ProgressView()
-                })
+                }
                 .scaledToFit()
                 .transition(.fade(duration: 0.4))
                 .frame(

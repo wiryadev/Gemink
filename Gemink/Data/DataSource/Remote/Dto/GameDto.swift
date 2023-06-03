@@ -37,7 +37,7 @@ struct GameDto: Codable {
     let updated: String?
     let backgroundImage, backgroundImageAdditional: String?
     let website: String?
-    let rating: Double?
+    let rating: Float?
     let ratingTop: Int?
     let added: Int?
     let playtime, moviesCount, creatorsCount: Int?

@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct CornerRadiusStyle: ViewModifier {
+
     var radius: CGFloat
     var corners: UIRectCorner
+
     struct CornerRadiusShape: Shape {
 
         var radius = CGFloat.infinity

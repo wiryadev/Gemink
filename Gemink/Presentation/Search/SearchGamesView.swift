@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct SearchGamesView: View {
+
     @StateObject var viewModel = SearchGamesViewModel()
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -55,13 +57,16 @@ struct SearchGamesView: View {
             prompt: "Find your favorite games"
         )
         .autocorrectionDisabled()
-        .onReceive(viewModel.$searchText
-            .debounce(for: .seconds(2), scheduler: DispatchQueue.main), perform: { output in
+        .onReceive(
+            viewModel.$searchText.debounce(
+                for: .seconds(2),
+                scheduler: DispatchQueue.main
+            ),
+            perform: { output in
                 guard !output.isEmpty else { return }
-                Task {
-                    await viewModel.searchGames()
-                }
-            })
+                Task { await viewModel.searchGames() }
+            }
+        )
         .onSubmit(of: .search) {
             Task {
                 await viewModel.searchGames()

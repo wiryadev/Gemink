@@ -52,6 +52,26 @@ struct DetailGameView: View {
                                 rating: data.getFormattedRating()
                             )
                             .padding(.top, 16)
+                            if let isFavorite = viewModel.isFavorite {
+                                Button {
+                                    if isFavorite {
+                                        viewModel.deleteFromFavorite(id: id)
+                                    } else {
+                                        Task {
+                                            await viewModel.addToFavorite(game: data)
+                                        }
+                                    }
+                                } label: {
+                                    Label(
+                                        isFavorite ? "Delete from Favorite" : "Add to Favorite",
+                                        systemImage: "bookmark.circle.fill"
+                                    )
+                                }
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(isFavorite ? Color.red : Color.accentColor)
+                                .cornerRadius(24)
+                            }
                             DescriptionView(description: data.description)
                                 .padding(.top, 16)
                             let contentWidth = (UIScreen.main.bounds.width - 16 - (24 * 2)) / 2
@@ -95,7 +115,10 @@ struct DetailGameView: View {
         .padding(.bottom, 16)
         .foregroundColor(.white)
         .toolbar(.hidden, for: .tabBar)
-        .task { await viewModel.getGameDetail(id: id) }
+        .task {
+            await viewModel.getGameDetail(id: id)
+            viewModel.checkIsFavorite(id: id)
+        }
     }
 }
 
@@ -154,9 +177,11 @@ extension DetailGameView {
             if genres.isEmpty {
                 self.formattedGenre = "-"
             } else {
-                self.formattedGenre = genres.map { genre in
-                    genre.name
-                }.joined(separator: ", ")
+                self.formattedGenre = genres
+                    .map { genre in
+                        genre.name
+                    }
+                    .joined(separator: ", ")
             }
         }
         var body: some View {
@@ -172,9 +197,11 @@ extension DetailGameView {
             if platforms.isEmpty {
                 self.formattedPlatform = "-"
             } else {
-                self.formattedPlatform = platforms.map { platform in
-                    platform.name
-                }.joined(separator: ", ")
+                self.formattedPlatform = platforms
+                    .map { platform in
+                        platform.name
+                    }
+                    .joined(separator: ", ")
             }
         }
         var body: some View {
