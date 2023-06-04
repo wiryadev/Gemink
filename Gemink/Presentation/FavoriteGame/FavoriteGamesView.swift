@@ -47,7 +47,6 @@ struct FavoriteGamesView: View {
                 }
             }
             .onAppear {
-                print("CheckFavorite: called")
                 viewModel.getAllFavoriteGames()
             }
             .navigationTitle("Favorite")

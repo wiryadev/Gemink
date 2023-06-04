@@ -13,7 +13,7 @@ struct AboutView: View {
             ZStack {
                 Color.nightBlack.ignoresSafeArea()
                 VStack {
-                    Image("about-pic")
+                    Image("AboutPic")
                         .resizable()
                         .scaledToFill()
                         .frame(width: 192, height: 192)
